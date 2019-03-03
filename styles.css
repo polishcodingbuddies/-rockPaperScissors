@@ -4,11 +4,53 @@ body{
     font-family: 'VT323', monospace;
 }
 
+
+/* START OF MAIN SECTION ROCK PAPER SCISSORS  */
 .gameName{
     text-align: center;
     font-size: 3.5rem;
     background-color: #222831;
     color:white;
-    padding: 2rem;
+    padding: 4rem 0;
+   
     letter-spacing: 0.3rem;
+    
 }
+
+
+
+/* END OF MAIN SECTION ROCK PAPER SCISSORS  */
+
+
+
+
+
+/* START OF PLAY GAME SECTION  #393E46*/
+
+
+#container {
+    background-color: #393E46;
+}
+
+.gameResult {
+    color:#00FFF5;
+    text-align: center;
+    font-size: 5rem;
+    padding-TOP: 10rem;
+    letter-spacing: 1rem;
+}
+
+
+.players{
+    font-size: 2rem;
+    padding-top: 6rem;
+}
+
+
+
+
+/* END OF PLAY GAME SECTION  */
+
+
+
+
