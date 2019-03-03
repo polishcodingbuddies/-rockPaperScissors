@@ -1,30 +1,80 @@
-
-body{
-    margin:0;
+body {
+    margin: 0;
     font-family: 'VT323', monospace;
 }
 
 
 /* START OF MAIN SECTION ROCK PAPER SCISSORS  */
 
-#main{
+#main {
     font-family: 'VT323', monospace;
 }
 
-.gameName{
+.gameName {
     text-align: center;
     font-size: 3.5rem;
     background-color: #222831;
-    color:white;
+    color: white;
     padding: 4rem 0;
     letter-spacing: 0.3rem;
-    
+
 }
 
+/* START ANIMATION MAIN */
+.gameName {
+    animation: colorRotate 2s linear 0s infinite;
+}
+
+@keyframes colorRotate {
+    from {
+        color: #6666ff;
+    }
+
+    10% {
+        color: #FF0000;
+    }
+
+    20% {
+        color: #ffcc33;
+    }
+
+    30% {
+        color: #cc0099;
+    }
+
+    40% {
+        color: #ff33cc;
+    }
+
+    50% {
+        color: #ffff33;
+    }
+
+    60% {
+        color: #3300cc;
+    }
+
+    70% {
+        color: #ff3399;
+    }
+
+    80% {
+        color: #99ffff;
+    }
+
+    90% {
+        color: #ccff33;
+    }
+
+    100% {
+        color: #00FF7F;
+    }
+}
+
+/* END OF ANIMATION MAIN */
 
 
 /* END OF MAIN SECTION ROCK PAPER SCISSORS  */
-
 
 
 
@@ -35,26 +85,29 @@ body{
 #container {
     background-color: #393E46;
     font-family: 'VT323', monospace;
-    padding-bottom: 2rem;
+    padding-bottom: 8rem;
 }
 
 .gameResult {
-    color:#00FFF5;
+    color: #00FFF5;
     text-align: center;
     font-size: 5rem;
     padding-TOP: 4rem;
     letter-spacing: 1.1rem;
+
 }
 
 
-.players{
+
+
+.players {
     font-size: 2rem;
     padding-top: 3rem;
     text-align: center;
-    
+
 }
 
-.player{
+.player {
     display: inline-block;
     color: #00adb5;
 }
@@ -64,34 +117,64 @@ body{
 }
 
 #playerTwo {
-     margin-left: 6rem;
+    margin-left: 6rem;
 }
 
-#avatarPlayer1{
+#avatarPlayer1 {
     position: relative;
-    right:3rem;
+    right: 3rem;
 }
 
-#avatarPlayer2{
+#avatarPlayer2 {
     position: relative;
-    left:3rem;
+    left: 3rem;
 }
 
-.sword{
+.sword {
     font-size: 5rem;
     position: relative;
     bottom: 4rem;
 }
 
-.playButton{
+.playButton {
+    margin-top: 4rem;
     width: 32rem;
     letter-spacing: 1rem;
-    background-color: #00adb5 !important;
-    
+    -webkit-box-shadow: -2px 0px 70px 12px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -2px 0px 70px 12px rgba(0, 0, 0, 04);
+    box-shadow: -2px 0px 70px 12px rgba(0, 255, 245, 0.3);
+
 }
 
 /* END OF PLAY GAME SECTION  */
 
 
 
+/* START OF ABOUT SECTION #00ADB5*/
 
+
+#about-app {
+    background-color: #00ADB5;
+    text-align: center;
+    padding-top: 20rem;
+}
+
+
+
+
+
+
+/* START OF ABOUT SECTION  */
+
+
+
+
+
+/* START OF FOOTER #00ADB5*/
+
+
+
+
+
+
+/* START OF FOOTER  */
