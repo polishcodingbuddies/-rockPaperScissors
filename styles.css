@@ -6,13 +6,17 @@ body{
 
 
 /* START OF MAIN SECTION ROCK PAPER SCISSORS  */
+
+#main{
+    font-family: 'VT323', monospace;
+}
+
 .gameName{
     text-align: center;
     font-size: 3.5rem;
     background-color: #222831;
     color:white;
     padding: 4rem 0;
-   
     letter-spacing: 0.3rem;
     
 }
@@ -30,37 +34,61 @@ body{
 
 #container {
     background-color: #393E46;
+    font-family: 'VT323', monospace;
+    padding-bottom: 2rem;
 }
 
 .gameResult {
     color:#00FFF5;
     text-align: center;
     font-size: 5rem;
-    padding-TOP: 10rem;
+    padding-TOP: 4rem;
     letter-spacing: 1.1rem;
 }
 
 
 .players{
     font-size: 2rem;
-    padding-top: 6rem;
+    padding-top: 3rem;
     text-align: center;
     
 }
 
 .player{
     display: inline-block;
-    
+    color: #00adb5;
 }
 
 #playerOne {
-    margin-right: 20rem;
+    margin-right: 6rem;
 }
 
 #playerTwo {
-     margin-left: 20rem;
+     margin-left: 6rem;
 }
 
+#avatarPlayer1{
+    position: relative;
+    right:3rem;
+}
+
+#avatarPlayer2{
+    position: relative;
+    left:3rem;
+}
+
+.sword{
+    font-size: 5rem;
+    position: relative;
+    bottom: 4rem;
+}
+
+.playButton{
+    width: 32rem;
+    letter-spacing: 1rem;
+    background-color: #00adb5 !important;
+    
+}
 
 /* END OF PLAY GAME SECTION  */
 

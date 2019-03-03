@@ -2,10 +2,15 @@
 <html>
 <head>
 
-<meta charset="UTF-8">
-<title>Rock Paper Scissors</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">  
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
 </head>
 
 <body>
@@ -13,36 +18,47 @@
     <section id="main">
         <div class="gameName">Rock &amp; Paper &amp; Scissors</div>
     </section>
-    
+
     <section id="container">
         <div class="gameResult">
             PLAY GAME
-        </div>    
-    
+        </div>
+
         <div class="players">
+
             <div class="player">
-            <p id="playerOne"><em>PLAYER 1</em></p>
+                <img id="avatarPlayer1" src="images/avatar1.png">
+                <p id="playerOne"><em>PLAYER 1</em></p>
             </div>
+
+            <div class="player">⚔️</div>
+
             <div class="player">
-            <p id="playerTwo"><em>PLAYER 2</em></p>
+                <img id="avatarPlayer2" src="images/avatar1.png">
+                <p id="playerTwo"><em>PLAYER 2</em></p>
+
             </div>
         </div>
-        
-        
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+            <button class="btn-outline btn-lg btn-light playButton">test⚔️</button>
+            </div>
+        </div>
+
     </section>
-    
+
     <section id="about-app">
-    
-    
+
+
     </section>
-    
+
     <section id="footer">
-    
-    
+
+
     </section>
-    
+
     <script type="text/javascript" src="index.js"></script>
-    
+
 </body>
 
 </html>
