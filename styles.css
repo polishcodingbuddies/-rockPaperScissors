@@ -25,7 +25,7 @@ body{
 
 
 
-/* START OF PLAY GAME SECTION  #393E46*/
+/* START OF PLAY GAME SECTION   #393E46*/
 
 
 #container {
@@ -37,16 +37,29 @@ body{
     text-align: center;
     font-size: 5rem;
     padding-TOP: 10rem;
-    letter-spacing: 1rem;
+    letter-spacing: 1.1rem;
 }
 
 
 .players{
     font-size: 2rem;
     padding-top: 6rem;
+    text-align: center;
+    
 }
 
+.player{
+    display: inline-block;
+    
+}
 
+#playerOne {
+    margin-right: 20rem;
+}
+
+#playerTwo {
+     margin-left: 20rem;
+}
 
 
 /* END OF PLAY GAME SECTION  */
