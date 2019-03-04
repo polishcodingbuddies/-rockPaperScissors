@@ -1,3 +1,7 @@
+html {
+    margin: 0;
+}
+
 body {
     margin: 0;
     font-family: 'VT323', monospace;
@@ -21,6 +25,7 @@ body {
 }
 
 /* START ANIMATION MAIN */
+
 .gameName {
     animation: colorRotate 2s linear 0s infinite;
 }
@@ -73,14 +78,9 @@ body {
 
 /* END OF ANIMATION MAIN */
 
-
 /* END OF MAIN SECTION ROCK PAPER SCISSORS  */
 
-
-
-
 /* START OF PLAY GAME SECTION   #393E46*/
-
 
 #container {
     background-color: #393E46;
@@ -148,10 +148,7 @@ body {
 
 /* END OF PLAY GAME SECTION  */
 
-
-
 /* START OF ABOUT SECTION #00ADB5*/
-
 
 #about-app {
     font-family: 'VT323', monospace;
@@ -164,33 +161,72 @@ body {
 
 #gameRulesID {
     padding-top: 60px;
-    
+
 }
 
 .rotateScissors {
-transform: rotate(180deg);
+    transform: rotate(180deg);
 
 }
 
+.winner {
+    animation: winnerColorRotate 2s linear 0s infinite;
+}
+
+.loser {
+    animation: loserColorRotate 2s linear 0s infinite;
+}
+
+.draw {
+    animation: drawColorRotate 2s linear 0s infinite;
+}
+
+
+@keyframes winnerColorRotate {
+    from {
+        color: forestgreen;
+    }
+
+    50% {
+        color: darkgreen;
+    }
+}
+
+@keyframes loserColorRotate {
+    from {
+        color: firebrick;
+    }
+
+    50% {
+        color: darkred;
+    }
+}
+
+@keyframes drawColorRotate {
+    from {
+        color: burlywood
+    }
+
+    50% {
+        color: darkorange;
+    }
+}
 
 
 /* START OF ABOUT SECTION  */
 
-
-
-
-
 /* START OF FOOTER #00ADB5*/
 
 #footer {
-    padding-top: 5rem ;
+    padding-top: 5rem;
+    padding-bottom: 0.5rem;
     background-color: #222831;
 
 }
 
 .createdBy {
     color: white;
-     font-family: 'VT323', monospace;
+    font-family: 'VT323', monospace;
     font-size: 30px;
     letter-spacing: 3px;
 }
@@ -199,13 +235,3 @@ transform: rotate(180deg);
 
 
 /* START OF FOOTER  */
-
-
-
-
-
-
-
-
-
-
