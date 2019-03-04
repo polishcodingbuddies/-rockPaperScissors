@@ -6,9 +6,11 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
+<iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/6rTdW-651Lw?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 </head>
@@ -20,6 +22,7 @@
     </section>
 
     <section id="container">
+        
         <div class="gameResult">
             PLAY GAME
 
@@ -53,10 +56,82 @@
     <section id="about-app">
         GAMES RULES
 
+        <div id="gameRulesID" class="row">
+            <!-- ROCK SECTION-->
+            <div class="col-lg-4 col-xs-6">
+
+                <i class="far fa-hand-rock"></i>
+                <i class="far fa-hand-scissors">
+                </i>
+
+            </div>
+
+
+            <div class="col-lg-4 col-xs-6">
+                <i class="far fa-hand-rock"></i>
+                <i class="far fa-hand-paper"></i>
+            </div>
+
+
+            <!-- clearfix xs cols every 2<div class="clearfix visible-xs">
+         
+         </div>  -->
+
+            <div class="col-lg-4 col-xs-6">
+                <i class="far fa-hand-rock"></i>
+                <i class="far fa-hand-rock"></i>
+            </div>
+
+
+
+            <!-- PAPER SECTION -->
+            <div class="clearfix visible-lg"></div>
+            <div class="col-lg-4 col-xs-6"> 
+                <i class="far fa-hand-paper"></i>
+                <i class="far fa-hand-scissors"></i>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-lg-4 col-xs-6"> 
+                <i class="far fa-hand-paper"></i>
+                <i class="far fa-hand-rock"></i>
+            </div>
+            <div class="col-lg-4 col-xs-6"> 
+                <i class="far fa-hand-paper"></i>
+                <i class="far fa-hand-paper"></i>    
+            </div>
+
+
+            <div class="clearfix visible-xs visible-lg"></div>
+
+                <!-- SCISSORS SECTION -->
+            <div class="col-lg-4 col-xs-6"> 
+             <i  class="far fa-hand-scissors rotateScissors"></i>
+                <i class="far fa-hand-paper"></i> 
+            </div>
+            <div class="col-lg-4 col-xs-6">
+                <i class="far fa-hand-scissors rotateScissors"></i>
+                  <i class="far fa-hand-rock"></i>
+            </div>
+            <div class="clearfix visible-xs">
+           
+            </div>
+            <div class="col-lg-4 col-xs-6"> 
+               <i  class="far fa-hand-scissors rotateScissors"></i>
+                   <i class="far fa-hand-scissors"></i>
+            </div>
+
+        </div>
+
+
+
     </section>
 
     <section id="footer">
-        CREATED BY SZYMON&amp;DAMIAN
+        <div class="createdBy text-center">
+            CREATED BY SZYMON &amp; DAMIAN
+            <p>&#9400; 2019</p>
+        </div>
+    
 
     </section>
 

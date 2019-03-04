@@ -154,13 +154,23 @@ body {
 
 
 #about-app {
+    font-family: 'VT323', monospace;
+    letter-spacing: 1.1rem;
     background-color: #00ADB5;
     text-align: center;
-    padding-top: 20rem;
+    font-size: 5rem;
+
 }
 
+#gameRulesID {
+    padding-top: 60px;
+    
+}
 
+.rotateScissors {
+transform: rotate(180deg);
 
+}
 
 
 
@@ -172,9 +182,30 @@ body {
 
 /* START OF FOOTER #00ADB5*/
 
+#footer {
+    padding-top: 5rem ;
+    background-color: #222831;
 
+}
+
+.createdBy {
+    color: white;
+     font-family: 'VT323', monospace;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
 
 
 
 
 /* START OF FOOTER  */
+
+
+
+
+
+
+
+
+
+
