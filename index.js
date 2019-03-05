@@ -60,9 +60,8 @@ function countingDown() {
 // hardcoded PLAYER HAS ALWAYS PAPER
 function roundResult() {
 
-    //    //visible button 'Fight'
-    //document.getElementById("play").style.visibility = "visible";
-
+    document.getElementById("fight-box-button").style.display = "block";
+    document.getElementById("choices").style.visibility = "hidden";
 
     //TODO -random computer choice and check who won
     var computerChoice = "Rock";
