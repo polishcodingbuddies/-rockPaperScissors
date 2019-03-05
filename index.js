@@ -33,7 +33,7 @@ function setRandomAvatarForPlayers() {
 
 function countingDown() {
     //hide button 'Fight'
-    document.getElementById("fight-box-button").style.visibility = "collapse";
+    document.getElementById("fight-box-button").style.display = "none";
     document.getElementById("choices").style.visibility = "visible";
     
     var counter = 6;
