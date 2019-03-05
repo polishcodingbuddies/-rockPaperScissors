@@ -1,5 +1,6 @@
 html {
     margin: 0;
+    box-sizing: content-box;
 }
 
 body {
@@ -85,7 +86,7 @@ body {
 #container {
     background-color: #393E46;
     font-family: 'VT323', monospace;
-    padding-bottom: 8rem;
+
 }
 
 .gameResult {
@@ -144,6 +145,24 @@ body {
     -moz-box-shadow: -2px 0px 70px 12px rgba(0, 0, 0, 04);
     box-shadow: -2px 0px 70px 12px rgba(0, 255, 245, 0.3);
 
+}
+
+
+.fight-box-button {
+    padding-bottom: 5.875rem;
+}
+
+.choices {
+    margin-top: 2rem;
+    font-size: 6rem;
+    padding-bottom: 2rem;
+}
+
+.choices i {
+    padding: 0 2.2rem;
+    border: 1px dotted yellow;
+    border-radius: 20%;
+    background-color: burlywood;
 }
 
 /* END OF PLAY GAME SECTION  */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-<iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/6rTdW-651Lw?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!--<iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/6rTdW-651Lw?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 
 
 </head>
@@ -31,14 +32,14 @@
 
             <div class="player">
                 <img id="avatarPlayer1" src="images/avatar1.png">
-                <p id="playerOne"><em>PLAYER 1</em></p>
+                <p id="playerOne"><em>PLAYER</em></p>
             </div>
 
             <div class="player sword">⚔️</div>
 
             <div class="player">
                 <img id="avatarPlayer2" src="images/avatar1.png">
-                <p id="playerTwo"><em>PLAYER 2</em></p>
+                <p id="playerTwo"><em>COMPUTER</em></p>
 
             </div>
 
@@ -46,7 +47,20 @@
         </div>
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
-                <button class="btn-outline btn-lg btn-light playButton" onclick="countingDown()">Fight!</button>
+
+                <div class="fight-box-button">
+                    <button class="btn-outline btn-lg btn-light playButton" id="play" visibility="hidden" onclick="countingDown()">Fight!</button>
+                </div>
+                <!--
+<div class="choices">
+    <i class="far fa-hand-rock" onclick="setRockChoiceDone"></i>
+    <i class="far fa-hand-paper"></i>
+    <i class="far fa-hand-scissors"></i>
+</div>
+-->
+
+
+
             </div>
         </div>
 
