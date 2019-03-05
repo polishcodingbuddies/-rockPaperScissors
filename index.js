@@ -42,13 +42,16 @@ function setScissorsChoiceDone() {
 }
 
 function countingDown() {
-    //hide button 'Fight'
-    document.getElementById("fight-box-button").style.display = "none";
-    document.getElementById("choices").style.visibility = "visible";
+
+
 
     var counter = 6;
     var run = setInterval(function () {
         document.querySelector(".gameResult").innerHTML = counter;
+
+        //hide button 'Fight'
+        document.getElementById("fight-box-button").style.visibility = "hidden";
+        document.getElementById("choices").style.visibility = "visible";
 
 
         if (playerChoice.length >= 1) {
@@ -58,22 +61,24 @@ function countingDown() {
 
         if (counter === 0) {
             playerNoTakenChoice = true;
-            //random choice TODO     
+
             document.querySelector(".gameResult").innerHTML = roundResult();
             clearInterval(run);
         }
         counter--;
+
+
     }, 1000);
 
 }
-// hardcoded COMPUTER HAS ALWAYS ROCK
-// hardcoded PLAYER HAS ALWAYS PAPER
+
+
 function roundResult() {
 
-    document.getElementById("fight-box-button").style.display = "block";
+    document.getElementById("fight-box-button").style.visibility = "visible";
     document.getElementById("choices").style.visibility = "hidden";
 
-    //TODO -random computer choice and check who won
+
 
     if (playerNoTakenChoice) {
         playerChoice = computerRandomChoice();
@@ -81,7 +86,6 @@ function roundResult() {
     var computerChoice = computerRandomChoice();
 
 
-    //isPaperChoiceDone = true;
 
 
     if (playerChoice && (computerChoice === "Rock")) {
@@ -145,6 +149,6 @@ var playerNoTakenChoice = false;
 var computerPoints = 0;
 var playerPoints = 0;
 var playerChoice = "";
-
+var roundNumber = 0;
 
 startGame();

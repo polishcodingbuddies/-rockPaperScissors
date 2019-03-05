@@ -166,8 +166,12 @@ body {
     background-color: burlywood;
 }
 
-.choice{
+.choice {
     display: inline-block;
+}
+
+.choice:hover {
+    opacity: 0.5;
 }
 
 /* END OF PLAY GAME SECTION  */
