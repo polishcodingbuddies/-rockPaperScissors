@@ -166,6 +166,10 @@ body {
     background-color: burlywood;
 }
 
+.choice{
+    display: inline-block;
+}
+
 /* END OF PLAY GAME SECTION  */
 
 /* START OF ABOUT SECTION #00ADB5*/

@@ -29,13 +29,23 @@ function setRandomAvatarForPlayers() {
 }
 
 
+function setRockChoiceDone() {
+    isRockChoiceDone = true;
+}
 
+function setPaperChoiceDone() {
+    isPaperChoiceDone = true;
+}
+
+function setScissorsChoiceDone() {
+    isScissorsChoiceDone = true;
+}
 
 function countingDown() {
     //hide button 'Fight'
     document.getElementById("fight-box-button").style.display = "none";
     document.getElementById("choices").style.visibility = "visible";
-    
+
     var counter = 6;
     var run = setInterval(function () {
         document.querySelector(".gameResult").innerHTML = counter;
@@ -64,8 +74,8 @@ function roundResult() {
     document.getElementById("choices").style.visibility = "hidden";
 
     //TODO -random computer choice and check who won
-    var computerChoice = "Rock";
-    isPaperChoiceDone = true;
+    var computerChoice = randomComputerChoice();
+    //isPaperChoiceDone = true;
 
 
     if (isPaperChoiceDone && (computerChoice == "Rock")) {
@@ -89,17 +99,34 @@ function roundResult() {
     }
 
     if (computerPoints == 3) {
+        resetGame();
         return "Computer won";
     } else if (playerPoints == 3) {
+        resetGame();
         return "Player won";
     } else {
+        resetRound();
         return playerPoints + " : " + computerPoints;
     }
 
+
+
+}
+
+function resetRound() {
+    isRockChoiceDone = false;
+    isPaperChoiceDone = false;
+    isScissorsChoiceDone = false;
 }
 
 function startGame() {
     setRandomAvatarForPlayers();
+}
+
+function resetGame() {
+    resetRound();
+    computerPoints = 0;
+    playerPoints = 0;
 }
 
 
