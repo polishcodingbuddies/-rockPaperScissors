@@ -33,8 +33,9 @@ function setRandomAvatarForPlayers() {
 
 function countingDown() {
     //hide button 'Fight'
-    document.getElementById("play").style.visibility = "hidden";
-
+    document.getElementById("fight-box-button").style.visibility = "hidden";
+    document.getElementById("choices").style.visibility = "visible";
+    
     var counter = 6;
     var run = setInterval(function () {
         document.querySelector(".gameResult").innerHTML = counter;
@@ -60,7 +61,7 @@ function countingDown() {
 function roundResult() {
 
     //    //visible button 'Fight'
-    document.getElementById("play").style.visibility = "visible";
+    //document.getElementById("play").style.visibility = "visible";
 
 
     //TODO -random computer choice and check who won
@@ -68,8 +69,6 @@ function roundResult() {
     isPaperChoiceDone = true;
 
 
-
-    //todo end the if statement
     if (isPaperChoiceDone && (computerChoice == "Rock")) {
         playerPoints++;
     } else if (isPaperChoiceDone && (computerChoice == "Scissors")) {
@@ -81,6 +80,12 @@ function roundResult() {
     } else if (isScissorsChoiceDone && (computerChoice == "Paper")) {
         playerPoints++;
     } else if (isScissorsChoiceDone && (computerChoice == "Scissors")) {
+        computerPoints = computerPoints;
+    } else if (isRockChoiceDone && (computerChoice == "Scissors")) {
+        playerPoints++;
+    } else if (isRockChoiceDone && (computerChoice == "Paper")) {
+        computerPoints++;
+    } else if (isRockChoiceDone && (computerChoice == "Rock")) {
         computerPoints = computerPoints;
     }
 

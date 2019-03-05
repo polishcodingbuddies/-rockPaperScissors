@@ -152,13 +152,14 @@ body {
     padding-bottom: 5.875rem;
 }
 
-.choices {
+#choices {
     margin-top: 2rem;
     font-size: 6rem;
     padding-bottom: 2rem;
+    visibility: hidden;
 }
 
-.choices i {
+#choices i {
     padding: 0 2.2rem;
     border: 1px dotted yellow;
     border-radius: 20%;
