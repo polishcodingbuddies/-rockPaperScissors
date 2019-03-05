@@ -156,7 +156,7 @@ body {
     margin-top: 2rem;
     font-size: 6rem;
     padding-bottom: 2rem;
-    visibility: hidden;
+    visibility: collapse;
 }
 
 #choices i {
