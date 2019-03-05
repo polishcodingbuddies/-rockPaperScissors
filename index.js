@@ -30,15 +30,15 @@ function setRandomAvatarForPlayers() {
 
 
 function setRockChoiceDone() {
-    isRockChoiceDone = true;
+    playerChoice = "Rock";
 }
 
 function setPaperChoiceDone() {
-    isPaperChoiceDone = true;
+    playerChoice = "Paper";
 }
 
 function setScissorsChoiceDone() {
-    isScissorsChoiceDone = true;
+    playerChoice = "Scissors";
 }
 
 function countingDown() {
@@ -51,18 +51,18 @@ function countingDown() {
         document.querySelector(".gameResult").innerHTML = counter;
 
 
-        if (isRockChoiceDone || isPaperChoiceDone || isScissorsChoiceDone) {
+        if (playerChoice.length >= 1) {
             document.querySelector(".gameResult").innerHTML = roundResult();
             clearInterval(run);
         }
 
         if (counter === 0) {
-
+            playerNoTakenChoice = true;
             //random choice TODO     
             document.querySelector(".gameResult").innerHTML = roundResult();
             clearInterval(run);
         }
-        counter--
+        counter--;
     }, 1000);
 
 }
@@ -74,28 +74,34 @@ function roundResult() {
     document.getElementById("choices").style.visibility = "hidden";
 
     //TODO -random computer choice and check who won
-    var computerChoice = randomComputerChoice();
+
+    if (playerNoTakenChoice) {
+        playerChoice = computerRandomChoice();
+    }
+    var computerChoice = computerRandomChoice();
+
+
     //isPaperChoiceDone = true;
 
 
-    if (isPaperChoiceDone && (computerChoice == "Rock")) {
+    if (playerChoice && (computerChoice === "Rock")) {
+        playerPoints = playerPoints;
+    } else if (playerChoice && (computerChoice === "Scissors")) {
         playerPoints++;
-    } else if (isPaperChoiceDone && (computerChoice == "Scissors")) {
+    } else if (playerChoice && (computerChoice === "Paper")) {
         computerPoints++;
-    } else if (isPaperChoiceDone && (computerChoice == "Paper")) {
-        computerPoints = computerPoints;
-    } else if (isScissorsChoiceDone && (computerChoice == "Rock")) {
-        computerPoints++;
-    } else if (isScissorsChoiceDone && (computerChoice == "Paper")) {
+    } else if (playerChoice && (computerChoice === "Rock")) {
         playerPoints++;
-    } else if (isScissorsChoiceDone && (computerChoice == "Scissors")) {
-        computerPoints = computerPoints;
-    } else if (isRockChoiceDone && (computerChoice == "Scissors")) {
-        playerPoints++;
-    } else if (isRockChoiceDone && (computerChoice == "Paper")) {
+    } else if (playerChoice && (computerChoice === "Paper")) {
+        playerPoints = playerPoints;
+    } else if (playerChoice && (computerChoice === "Scissors")) {
         computerPoints++;
-    } else if (isRockChoiceDone && (computerChoice == "Rock")) {
-        computerPoints = computerPoints;
+    } else if (playerChoice && (computerChoice === "Scissors")) {
+        playerPoints = playerPoints;
+    } else if (playerChoice && (computerChoice === "Paper")) {
+        playerPoints++;
+    } else if (playerChoice && (computerChoice === "Rock")) {
+        computerPoints++;
     }
 
     if (computerPoints == 3) {
@@ -113,10 +119,14 @@ function roundResult() {
 
 }
 
+function computerRandomChoice() {
+    var tab = ["Rock", "Scissors", "Paper"];
+    var randomNumber = getRandomNumber(3) - 1;
+    return tab[randomNumber];
+}
+
 function resetRound() {
-    isRockChoiceDone = false;
-    isPaperChoiceDone = false;
-    isScissorsChoiceDone = false;
+    playerChoice = "";
 }
 
 function startGame() {
@@ -131,11 +141,10 @@ function resetGame() {
 
 
 // game variables
-
+var playerNoTakenChoice = false;
 var computerPoints = 0;
 var playerPoints = 0;
-var isRockChoiceDone = false;
-var isPaperChoiceDone = false;
-var isScissorsChoiceDone = false;
+var playerChoice = "";
+
 
 startGame();
