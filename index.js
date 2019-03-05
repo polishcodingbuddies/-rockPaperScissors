@@ -27,4 +27,23 @@ function setRandomAvatarForPlayers() {
 
 
 }
+
+
+
+
+function countingDown() {
+
+    var counter = 10;
+    var run = setInterval(function () {
+        document.querySelector(".gameResult").innerHTML = counter;
+        if (counter === 0) {
+            document.querySelector(".gameResult").innerHTML = "RESULT";
+            clearInterval(run);
+        }
+        counter--
+    }, 1000);
+}
+
+
+
 setRandomAvatarForPlayers();
