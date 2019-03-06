@@ -131,20 +131,42 @@ body {
     left: 3rem;
 }
 
-.sword {
+#sword {
     font-size: 5rem;
     position: relative;
-    bottom: 4rem;
+    top: 6rem;
+    left: 0.5rem;
+}
+
+#playerChoice {
+    margin: 0;
+    visibility: hidden;
+    font-size: 3rem;
+    position: relative;
+    right: 5rem
+}
+
+#computerChoice {
+    margin: 0;
+    visibility: hidden;
+    font-size: 3rem;
+    position: relative;
+    bottom: 4.5rem;
+    left: 5rem
 }
 
 .playButton {
     margin-top: 4rem;
     width: 32rem;
-    letter-spacing: 1rem;
+    letter-spacing: 0.6rem;
     -webkit-box-shadow: -2px 0px 70px 12px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: -2px 0px 70px 12px rgba(0, 0, 0, 04);
     box-shadow: -2px 0px 70px 12px rgba(0, 255, 245, 0.3);
+    background-color: #222831 !important;
+}
 
+#play:hover {
+    opacity: 0.8;
 }
 
 
@@ -157,6 +179,8 @@ body {
     font-size: 6rem;
     padding-bottom: 2rem;
     visibility: hidden;
+    position: relative;
+    bottom: 5rem;
 }
 
 #choices i {
