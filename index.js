@@ -1,239 +1,240 @@
-	
-				// MUSIC SECTION
-var playButton;
+	// MUSIC SECTION
+	var playButton;
 
 
-function playMusic() {
-    audio = new Audio();
-    audio.src="audio/whatIsLove.mp3";
-    audio.loop = true;
-    audio.play();
-    playButton = document.getElementById("playButtonID");
-      playButton.addEventListener("click", play);
-      
-    stopButton.addEventListener("click", stop);
-        function play() {
-        if(audio.paused) {
-            audio.play();
-           playbtn.style.background = "url(imagees/avatar1.png) no-repeat";
-        } else {
-            audio.pause();
-             playbtn.style.background = "url(imagees/avatar2.png) no-repeat";
-        }
-    }
-    }
+	function playMusic() {
+	    audio = new Audio();
+	    audio.src = "audio/whatIsLove.mp3";
+	    audio.loop = true;
+	    audio.play();
+	    playButton = document.getElementById("playMusicButtonID");
+	    playButton.addEventListener("click", play);
 
-  window.addEventListener("load", playMusic);
+	    stopButton.addEventListener("click", stop);
 
+	    function play() {
+	        if (audio.paused) {
+	            audio.play();
+	            playbtn.style.background = "url(imagees/avatar1.png) no-repeat";
+	        } else {
+	            audio.pause();
+	            playbtn.style.background = "url(imagees/avatar2.png) no-repeat";
+	        }
+	    }
+	}
 
-// END OF MUSIC SECTION
+	window.addEventListener("load", playMusic);
 
 
+	// END OF MUSIC SECTION
 
 
-function getRandomFileNameOfAvatar(randomNumber) {
-    return "images/avatar" + randomNumber + ".png"
-}
 
-//randomizer in range 1 to maxNumber
-function getRandomNumber(maxNumber) {
-    return Math.floor((Math.random() * maxNumber) + 1);
-}
 
+	function getRandomFileNameOfAvatar(randomNumber) {
+	    return "images/avatar" + randomNumber + ".png"
+	}
 
-function setRandomAvatarForPlayers() {
-    var numberOfAvailableAvatars = 7;
+	//randomizer in range 1 to maxNumber
+	function getRandomNumber(maxNumber) {
+	    return Math.floor((Math.random() * maxNumber) + 1);
+	}
 
-    var randomFileNameOfAvatarForPlayerOne = getRandomFileNameOfAvatar(getRandomNumber(numberOfAvailableAvatars));
-    var randomFileNameOfAvatarForPlayerTwo = getRandomFileNameOfAvatar(getRandomNumber(numberOfAvailableAvatars));
 
+	function setRandomAvatarForPlayers() {
+	    var numberOfAvailableAvatars = 7;
 
-    // loop to check if both players dont have same avatar
-    while (randomFileNameOfAvatarForPlayerOne === randomFileNameOfAvatarForPlayerTwo) {
-        randomFileNameOfAvatarForPlayerTwo = getRandomFileNameOfAvatar(getRandomNumber(numberOfAvailableAvatars));
-    }
+	    var randomFileNameOfAvatarForPlayerOne = getRandomFileNameOfAvatar(getRandomNumber(numberOfAvailableAvatars));
+	    var randomFileNameOfAvatarForPlayerTwo = getRandomFileNameOfAvatar(getRandomNumber(numberOfAvailableAvatars));
 
 
-    document.querySelectorAll(".player img")[0].setAttribute("src", randomFileNameOfAvatarForPlayerOne);
+	    // loop to check if both players dont have same avatar
+	    while (randomFileNameOfAvatarForPlayerOne === randomFileNameOfAvatarForPlayerTwo) {
+	        randomFileNameOfAvatarForPlayerTwo = getRandomFileNameOfAvatar(getRandomNumber(numberOfAvailableAvatars));
+	    }
 
-    document.querySelectorAll(".player img")[1].setAttribute("src", randomFileNameOfAvatarForPlayerTwo);
 
+	    document.querySelectorAll(".player img")[0].setAttribute("src", randomFileNameOfAvatarForPlayerOne);
 
-}
+	    document.querySelectorAll(".player img")[1].setAttribute("src", randomFileNameOfAvatarForPlayerTwo);
 
 
-function setRockChoiceDone() {
-    playerChoice = "Rock";
-}
+	}
 
-function setPaperChoiceDone() {
-    playerChoice = "Paper";
-}
 
-function setScissorsChoiceDone() {
-    playerChoice = "Scissors";
-}
+	function setRockChoiceDone() {
+	    playerChoice = "Rock";
+	}
 
-function countingDown() {
+	function setPaperChoiceDone() {
+	    playerChoice = "Paper";
+	}
 
-    var counter = 10;
-    var run = setInterval(function () {
-        document.querySelector(".gameResult").innerHTML = counter;
+	function setScissorsChoiceDone() {
+	    playerChoice = "Scissors";
+	}
 
+	function countingDown() {
 
-        displayChoicesButtons()
-        displaySword()
+	    var counter = 10;
+	    var run = setInterval(function () {
+	        document.querySelector(".gameResult").innerHTML = counter;
 
-        if (playerChoice.length >= 1) {
-            document.querySelector(".gameResult").innerHTML = roundResult();
-            clearInterval(run);
-        }
 
-        if (counter === 0) {
-            playerNoTakenChoice = true;
+	        displayChoicesButtons()
+	        displaySword()
 
-            document.querySelector(".gameResult").innerHTML = roundResult();
-            clearInterval(run);
-        }
-        counter--;
+	        if (playerChoice.length >= 1) {
+	            document.querySelector(".gameResult").innerHTML = roundResult();
+	            clearInterval(run);
+	        }
 
+	        if (counter === 0) {
+	            playerNoTakenChoice = true;
 
-    }, 1000);
+	            document.querySelector(".gameResult").innerHTML = roundResult();
+	            clearInterval(run);
+	        }
+	        counter--;
 
-}
 
+	    }, 1000);
 
-function roundResult() {
+	}
 
-    document.getElementById("fight-box-button").style.visibility = "visible";
-    document.getElementById("choices").style.visibility = "hidden";
 
+	function roundResult() {
 
-    if (playerNoTakenChoice) {
-        playerChoice = computerRandomChoice();
-    }
-    computerChoice = computerRandomChoice();
+	    document.getElementById("fight-box-button").style.visibility = "visible";
+	    document.getElementById("choices").style.visibility = "hidden";
 
-    //hide sword
-    document.getElementById("sword").style.visibility = "hidden";
 
+	    if (playerNoTakenChoice) {
+	        playerChoice = computerRandomChoice();
+	    }
+	    computerChoice = computerRandomChoice();
 
+	    //hide sword
+	    document.getElementById("sword").style.visibility = "hidden";
 
-    displayChoices(playerChoice, computerChoice);
 
 
+	    displayChoices(playerChoice, computerChoice);
 
-    if ((playerChoice == "Rock") && (computerChoice === "Rock")) {
-        playerPoints = playerPoints;
-    } else if ((playerChoice === "Rock") && (computerChoice === "Scissors")) {
-        playerPoints++;
-    } else if ((playerChoice === "Rock") && (computerChoice === "Paper")) {
-        computerPoints++;
-    } else if ((playerChoice === "Paper") && (computerChoice === "Rock")) {
-        playerPoints++;
-    } else if ((playerChoice === "Paper") && (computerChoice === "Paper")) {
-        playerPoints = playerPoints;
-    } else if ((playerChoice === "Paper") && (computerChoice === "Scissors")) {
-        computerPoints++;
-    } else if ((playerChoice === "Scissors") && (computerChoice === "Scissors")) {
-        playerPoints = playerPoints;
-    } else if ((playerChoice === "Scissors") && (computerChoice === "Paper")) {
-        playerPoints++;
-    } else if ((playerChoice === "Scissors") && (computerChoice === "Rock")) {
-        computerPoints++;
-    }
 
-    if (computerPoints == 3) {
-        resetGame();
-        return "Computer won";
-    } else if (playerPoints == 3) {
-        resetGame();
-        return "Player won";
-    } else {
-        resetRound();
-        return playerPoints + " : " + computerPoints;
-    }
 
+	    if ((playerChoice == "Rock") && (computerChoice === "Rock")) {
+	        playerPoints = playerPoints;
+	    } else if ((playerChoice === "Rock") && (computerChoice === "Scissors")) {
+	        playerPoints++;
+	    } else if ((playerChoice === "Rock") && (computerChoice === "Paper")) {
+	        computerPoints++;
+	    } else if ((playerChoice === "Paper") && (computerChoice === "Rock")) {
+	        playerPoints++;
+	    } else if ((playerChoice === "Paper") && (computerChoice === "Paper")) {
+	        playerPoints = playerPoints;
+	    } else if ((playerChoice === "Paper") && (computerChoice === "Scissors")) {
+	        computerPoints++;
+	    } else if ((playerChoice === "Scissors") && (computerChoice === "Scissors")) {
+	        playerPoints = playerPoints;
+	    } else if ((playerChoice === "Scissors") && (computerChoice === "Paper")) {
+	        playerPoints++;
+	    } else if ((playerChoice === "Scissors") && (computerChoice === "Rock")) {
+	        computerPoints++;
+	    }
 
+	    if (computerPoints == 3) {
+	        resetGame();
+	        return "Computer won";
+	    } else if (playerPoints == 3) {
+	        resetGame();
+	        return "Player won";
+	    } else {
+	        resetRound();
+	        return playerPoints + " : " + computerPoints;
+	    }
 
-}
 
-function displayChoices(playerChoice,
-    computerChoice) {
 
-    if (playerChoice === "Rock") {
-        document.getElementById("playerChoice").style.visibility = "visible";
-        var doc = document.getElementById("player-choice-id");
-        doc.className = "far fa-hand-rock draw";
+	}
 
-    } else if (playerChoice === "Paper") {
-        document.getElementById("playerChoice").style.visibility = "visible";
-        var doc = document.getElementById("player-choice-id");
-        doc.className = "far fa-hand-paper draw";
+	function displayChoices(playerChoice,
+	    computerChoice) {
 
-    } else if (playerChoice === "Scissors") {
-        document.getElementById("playerChoice").style.visibility = "visible";
-        var doc = document.getElementById("player-choice-id");
-        doc.className = "far fa-hand-scissors draw rotateScissors";
-    }
+	    if (playerChoice === "Rock") {
+	        document.getElementById("playerChoice").style.visibility = "visible";
+	        var doc = document.getElementById("player-choice-id");
+	        doc.className = "far fa-hand-rock draw";
 
-    if (computerChoice === "Rock") {
-        document.getElementById("computerChoice").style.visibility = "visible";
-        var doc = document.getElementById("computer-choice-id");
-        doc.className = "far fa-hand-rock draw";
-    } else if (computerChoice === "Paper") {
-        document.getElementById("computerChoice").style.visibility = "visible";
-        var doc = document.getElementById("computer-choice-id");
-        doc.className = "far fa-hand-paper draw";
-    } else if (computerChoice === "Scissors") {
-        document.getElementById("computerChoice").style.visibility = "visible";
-        var doc = document.getElementById("computer-choice-id");
-        doc.className = "far fa-hand-scissors draw";
-    }
+	    } else if (playerChoice === "Paper") {
+	        document.getElementById("playerChoice").style.visibility = "visible";
+	        var doc = document.getElementById("player-choice-id");
+	        doc.className = "far fa-hand-paper draw";
 
+	    } else if (playerChoice === "Scissors") {
+	        document.getElementById("playerChoice").style.visibility = "visible";
+	        var doc = document.getElementById("player-choice-id");
+	        doc.className = "far fa-hand-scissors draw rotateScissors";
+	    }
 
-}
+	    if (computerChoice === "Rock") {
+	        document.getElementById("computerChoice").style.visibility = "visible";
+	        var doc = document.getElementById("computer-choice-id");
+	        doc.className = "far fa-hand-rock draw";
+	    } else if (computerChoice === "Paper") {
+	        document.getElementById("computerChoice").style.visibility = "visible";
+	        var doc = document.getElementById("computer-choice-id");
+	        doc.className = "far fa-hand-paper draw";
+	    } else if (computerChoice === "Scissors") {
+	        document.getElementById("computerChoice").style.visibility = "visible";
+	        var doc = document.getElementById("computer-choice-id");
+	        doc.className = "far fa-hand-scissors draw";
+	    }
 
-function displayChoicesButtons() {
 
-    document.getElementById("fight-box-button").style.visibility = "hidden";
-    document.getElementById("choices").style.visibility = "visible";
-}
+	}
 
-function displaySword() {
-    document.getElementById("playerChoice").style.visibility = "hidden";
-    document.getElementById("computerChoice").style.visibility = "hidden";
+	function displayChoicesButtons() {
 
-    document.getElementById("sword").style.visibility = "visible";
+	    document.getElementById("fight-box-button").style.visibility = "hidden";
+	    document.getElementById("choices").style.visibility = "visible";
+	}
 
-}
+	function displaySword() {
+	    document.getElementById("playerChoice").style.visibility = "hidden";
+	    document.getElementById("computerChoice").style.visibility = "hidden";
 
-function computerRandomChoice() {
-    var tab = ["Paper", "Scissors", "Paper"];
-    var randomNumber = getRandomNumber(3) - 1;
-    return tab[randomNumber];
-}
+	    document.getElementById("sword").style.visibility = "visible";
 
-function resetRound() {
-    playerChoice = "";
-    computerChoice = "";
-}
+	}
 
-function startGame() {
-    setRandomAvatarForPlayers();
-}
+	function computerRandomChoice() {
+	    var tab = ["Paper", "Scissors", "Paper"];
+	    var randomNumber = getRandomNumber(3) - 1;
+	    return tab[randomNumber];
+	}
 
-function resetGame() {
-    resetRound();
-    computerPoints = 0;
-    playerPoints = 0;
-}
+	function resetRound() {
+	    playerChoice = "";
+	    computerChoice = "";
+	    playerNoTakenChoice = false;
+	}
 
+	function startGame() {
+	    setRandomAvatarForPlayers();
+	}
 
-// game variables
-var playerNoTakenChoice = false;
-var computerPoints = 0;
-var playerPoints = 0;
-var playerChoice = "";
-var computerChoice = "";
-startGame();
+	function resetGame() {
+	    resetRound();
+	    computerPoints = 0;
+	    playerPoints = 0;
+	}
+
+
+	// game variables
+	var playerNoTakenChoice = false;
+	var computerPoints = 0;
+	var playerPoints = 0;
+	var playerChoice = "";
+	var computerChoice = "";
+	startGame();

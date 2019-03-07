@@ -9,10 +9,22 @@ body {
 }
 
 
-#playButtonID {
+#playMusicButtonID {
     border: none;
     cursor: pointer;
+    position: relative;
+    left: 44%;
+    bottom: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: #00adb5;
+
 }
+
+#playMusicButtonID:hover {
+    color: #00FFF5;
+}
+
 /* START OF MAIN SECTION ROCK PAPER SCISSORS  */
 
 #main {
@@ -294,61 +306,60 @@ body {
 
 @media screen and (max-width: 825px) {
     #play {
-       width: 50%;
+        width: 50%;
         margin-top: 4rem;
-         margin:auto;
-        display:block;
+        margin: auto;
+        display: block;
         letter-spacing: 5px;
-        
+
     }
 }
 
 @media screen and (max-width: 770px) {
     #play {
-       width: 35%;
+        width: 35%;
         margin-top: -5px;
-         
+
         margin-top: 5px;
-         margin:auto;
-        display:block;
+        margin: auto;
+        display: block;
         letter-spacing: 5px;
-        
+
     }
-    
+
 }
- 
+
 @media screen and (max-width: 474px) {
     .playerOneDiv {
         margin-right: 300px;
     }
-    
+
     #sword {
-      
-         display: block;
+
+        display: block;
         margin-left: 0px;
         margin-top: -60px;
-        
-        
-        
-      
-        
+
+
+
+
+
     }
     #computerPlayer {
-                display: block;
-      padding-right: 120px;
+        display: block;
+        padding-right: 120px;
         margin-left: 40px;
-       
-     
-      
+
+
+
     }
     #play {
         display: block;
 
-     
-        
+
+
     }
-    .playerOneDiv{
+    .playerOneDiv {
         padding-left: 150px;
     }
 }
-
