@@ -9,6 +9,10 @@ body {
 }
 
 
+#playButtonID {
+    border: none;
+    cursor: pointer;
+}
 /* START OF MAIN SECTION ROCK PAPER SCISSORS  */
 
 #main {
@@ -286,4 +290,65 @@ body {
 
 
 
-/* START OF FOOTER  */
+/* RSPONSIVE DESIGN  */
+
+@media screen and (max-width: 825px) {
+    #play {
+       width: 50%;
+        margin-top: 4rem;
+         margin:auto;
+        display:block;
+        letter-spacing: 5px;
+        
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #play {
+       width: 35%;
+        margin-top: -5px;
+         
+        margin-top: 5px;
+         margin:auto;
+        display:block;
+        letter-spacing: 5px;
+        
+    }
+    
+}
+ 
+@media screen and (max-width: 474px) {
+    .playerOneDiv {
+        margin-right: 300px;
+    }
+    
+    #sword {
+      
+         display: block;
+        margin-left: 0px;
+        margin-top: -60px;
+        
+        
+        
+      
+        
+    }
+    #computerPlayer {
+                display: block;
+      padding-right: 120px;
+        margin-left: 40px;
+       
+     
+      
+    }
+    #play {
+        display: block;
+
+     
+        
+    }
+    .playerOneDiv{
+        padding-left: 150px;
+    }
+}
+

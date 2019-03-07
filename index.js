@@ -1,3 +1,36 @@
+	
+				// MUSIC SECTION
+var playButton;
+
+
+function playMusic() {
+    audio = new Audio();
+    audio.src="audio/whatIsLove.mp3";
+    audio.loop = true;
+    audio.play();
+    playButton = document.getElementById("playButtonID");
+      playButton.addEventListener("click", play);
+      
+    stopButton.addEventListener("click", stop);
+        function play() {
+        if(audio.paused) {
+            audio.play();
+           playbtn.style.background = "url(imagees/avatar1.png) no-repeat";
+        } else {
+            audio.pause();
+             playbtn.style.background = "url(imagees/avatar2.png) no-repeat";
+        }
+    }
+    }
+
+  window.addEventListener("load", playMusic);
+
+
+// END OF MUSIC SECTION
+
+
+
+
 function getRandomFileNameOfAvatar(randomNumber) {
     return "images/avatar" + randomNumber + ".png"
 }
