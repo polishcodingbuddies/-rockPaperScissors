@@ -209,7 +209,7 @@
 	}
 
 	function computerRandomChoice() {
-	    var tab = ["Paper", "Scissors", "Paper"];
+	    var tab = ["Rock", "Scissors", "Paper"];
 	    var randomNumber = getRandomNumber(3) - 1;
 	    return tab[randomNumber];
 	}
