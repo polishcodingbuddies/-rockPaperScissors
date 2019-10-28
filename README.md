@@ -28,12 +28,13 @@ The WebApp is compatible with devices of all sizes and all OS's
         <img src="https://polishcodingbuddies.github.io/rockPaperScissors/images/readme/mobile2.png" 
         alt="#" width="350" height="350">
     </td>
-        <td>
-            <img src="https://polishcodingbuddies.github.io/rockPaperScissors/images/readme/mobile3.png" 
-            alt="#" width="350" height="350">
-        </td>
+       
 </tr>
+
 </table>
+
+# version 1.0
+[live demo](https://polishcodingbuddies.github.io/rockPaperScissors/)
 
 # How it works?
 Both player and computer avatar are random generated. Player has 10 seconds to make decision, if there is no reaction
@@ -44,9 +45,9 @@ user turn will be picked up by a function. Player who get first 3 wins, is a win
 
 
 
-[Damian Wójtowicz ](https://github.com/orestwojtowicz) |[Szymon Gąsior](https://www.github.com/sgasior)
+[Damian Wójtowicz ](https://github.com/orestwojtowicz) | [Szymon Gąsior](https://www.github.com/sgasior)
 
 
 
-MIT © 
+Licence MIT © 
 
