@@ -22,13 +22,16 @@ The WebApp is compatible with devices of all sizes and all OS's
 <tr>
     <td> 
     <img src="https://polishcodingbuddies.github.io/rockPaperScissors/images/readme/mobile1.png" 
-    alt="#" width="350" height="350">
+     width="350" height="350">
     </td>
     <td>
         <img src="https://polishcodingbuddies.github.io/rockPaperScissors/images/readme/mobile2.png" 
-        alt="#" width="350" height="350">
+       width="350" height="350">
     </td>
-       
+          <td>
+               <img src="https://polishcodingbuddies.github.io/rockPaperScissors/images/readme/mobile2.png" 
+              width="350" height="350">
+           </td>
 </tr>
 
 </table>
